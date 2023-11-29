@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 
+        SOCKET IO
+        </title>
+    </head>
+<body>
+    <h1> SOCKET IO...</h1>
+</body>
+<script src="socket.io/socket.io.js"></script>
+<script> 
+    const socket = io();
+    socket.on('connect',()=>{
+        console.log(socket.id);
+    })
+    socket.emit('message' , "Hello, Yakoob Here !")
+    socket.on('server',msg =>{
+        console.log(msg);
+    })
+</script>
+</html>
+
